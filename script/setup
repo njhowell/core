@@ -17,7 +17,8 @@ fi
 mkdir -p config
 
 if [ ! -n "$DEVCONTAINER" ];then
-  python3 -m venv venv
+  #python3 -m venv venv
+  virtualenv --python=/usr/bin/python3 venv --always-copy
   source venv/bin/activate
 fi
 
